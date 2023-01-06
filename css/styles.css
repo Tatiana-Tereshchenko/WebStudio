@@ -22,6 +22,7 @@ ul, ol {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    list-style-type: none;
 }
 img {
     display: block;
@@ -44,6 +45,9 @@ body {
     margin-right: auto;
     padding-right: 16px;
     padding-left: 16px;
+}
+.heder-link-portfolio{
+
 }
 
 @media screen and (min-width: 480px) {
@@ -298,9 +302,25 @@ position: absolute;
         top: 55px;
         left: 0%;
 }
+.heder-link-portfolio::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: #4D5AE5;
+    top: 55px;
+    left: 0%;
+}
+
     .studio {
         color: #4D5AE5;
 }
+
+  .heder-link-portfolio {
+    color: #4D5AE5;
+  }
     .page-nav {
         display: flex;
     }
@@ -616,8 +636,6 @@ margin-bottom: 120px;
     justify-content: center;
     gap: 24px;
     margin-top: 12px;
-    list-style-type: none;
-
 }
 
 
@@ -642,7 +660,6 @@ margin-bottom: 120px;
         display: flex;
         flex-direction: column;
         text-align: center;
-        list-style-type: none;
         gap: 72px;
         width: 264px;
         margin-right: auto;
@@ -660,7 +677,6 @@ margin-bottom: 120px;
     .team {
         display: flex;
         flex-wrap: wrap-reverse;
-        list-style-type: none;
         justify-content: center;
         gap: 64px 24px;
     }
@@ -718,9 +734,7 @@ margin-bottom: 120px;
     color: #4D5AE5;
     fill: #4D5AE5;
 }
-.customers-list {
-list-style-type: none;
-}
+
 @media screen and (max-width: 767px) {
 
 
@@ -877,7 +891,7 @@ list-style-type: none;
 .futer-list-icon {
     display: flex;
     gap: 16px;
-    list-style-type: none;
+    
 }
 .futer-Subscribe {
     display: flex;
@@ -923,7 +937,7 @@ list-style-type: none;
     .futer-list-icon {
     display: flex;
     gap: 16px;
-    list-style-type: none;
+   
 }
     
 .form-futer {
@@ -1051,23 +1065,10 @@ list-style-type: none;
     margin-bottom: 72px;
 }
 
-
 .page-decor {
 display: flex;
 flex-wrap: wrap;
-margin-left: -24px;
-margin-top: -48px;
-
 }
-.decor-portfolio {
-    flex-basis: calc(100% / 3 - 24px);
-    margin-top: 48px;
-    margin-left: 24px;
-}
-
-
-
-
 .portfolio {
     border-left: 0.5px solid;
     border-bottom: 0.5px solid;
@@ -1100,6 +1101,61 @@ margin-top: -48px;
 .portfolio-section:focus .overlay {
 transform: translate(0, 0);
 }
+
+@media screen and (max-width: 767px) {
+.page-decor {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    }
+.overlay {
+    width: 396px;
+    }
+.decor-portfolio:not(:last-child) {
+    margin-bottom: 24px;
+    }
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px 24px;
+    margin-bottom: 48px;
+    }
+.page-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    }
+}
+@media screen and (min-width: 768px) {
+.page-decor {
+    gap: 24px;
+    }
+.page-section {
+    padding-top: 64px;
+            
+}
+.filter {
+margin-bottom: 64px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.page-section {
+        padding-top: 96px;
+
+    }
+        .filter {
+            margin-bottom: 72px;
+        }
+}
+
+
+
+
+
+
 
 /*MODAL WINDOW*/
 
