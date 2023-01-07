@@ -46,9 +46,7 @@ body {
     padding-right: 16px;
     padding-left: 16px;
 }
-.heder-link-portfolio{
 
-}
 
 @media screen and (min-width: 480px) {
     .conteiner {
@@ -66,7 +64,7 @@ body {
 
 @media screen and (min-width: 1200px) {
     .conteiner {
-        width: 1200px;
+        width: 1160px;
     }
 }
 
@@ -81,7 +79,9 @@ body {
 .page-header {
     display: flex;
     align-items: baseline;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
     padding-top: 24px;
     padding-bottom: 24px;
 }
@@ -146,6 +146,9 @@ position: absolute;
     z-index: 999;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
+    padding-left: 80px;
+    padding-left: 40px;
+    padding-bottom: 40px;
 }
 .menu-conteiner.is-open {
     transform: translateX(0);
@@ -178,8 +181,8 @@ position: absolute;
 .social-icons-mobile-items {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    
+ 
+    gap: 56px;
 }
 
 .social-list-mobile {
@@ -206,18 +209,12 @@ position: absolute;
     font-size: 36px;
     line-height: 1.1;
     list-style-type: none;
-
-}
-.mobile-studio {
-    margin-top: 80px;
-    margin-bottom: 40px;
-}
-.mobile-portfolio {
-    margin-bottom: 40px;
-}
-.mobile-contacts {
     margin-bottom: 284px;
 }
+.mobile-section:not(:last-child) {
+    margin-bottom: 40px;
+}
+
 .social-icons-mobile-items {
     margin-bottom: 0px;
 }
@@ -235,6 +232,12 @@ position: absolute;
     font-weight: 600;
     text-decoration: none;
 }
+.mobile-section:hover {
+    color: #404BBF;
+}
+.mobile-section:focus {
+    color: #404BBF;
+}
 .mobile-link-second {
     color: rgba(67, 68, 85, 1);
     font-size: 20px;
@@ -251,18 +254,13 @@ position: absolute;
 
 @media screen and (min-width: 768px) {
     .page-header-conteiner {
-        
         display: flex;
         align-items: baseline;
-    
-    }
-    .page-nav {
-        padding-top: 24px;
-        padding-bottom: 22px;
     }
     .page-heder-link {
         display: flex;
         gap: 40px;
+        
     }
     .nav-header {
         position: relative;
@@ -270,14 +268,15 @@ position: absolute;
     }
     .heder-link {
         text-decoration: none;
-        padding-top: 24px;
-        padding-bottom: 22px;
         color: var(--title-text-color);
         font-weight: 600;
         line-height: 1.5;
+        padding-top: 24px;
+        padding-bottom: 24px;
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: var(--time-function);
+        
         }
     .heder-link:hover {
         color: rgba(64, 75, 191, 1);
@@ -297,9 +296,9 @@ position: absolute;
         display: block;
         border-radius: 2px;
         width: 100%;
-        height: 4px;
         background-color: #4D5AE5;
-        top: 55px;
+        height: 4px;
+        bottom: -100%;
         left: 0%;
 }
 .heder-link-portfolio::after {
@@ -310,7 +309,7 @@ position: absolute;
     width: 100%;
     height: 4px;
     background-color: #4D5AE5;
-    top: 55px;
+    bottom: -110%;
     left: 0%;
 }
 
@@ -323,11 +322,11 @@ position: absolute;
   }
     .page-nav {
         display: flex;
+        align-items: baseline;
     }
     .heder-contacts {
         color: rgba(67, 68, 85, 1);
         display: flex;
-        margin-bottom: 4px;
         flex-direction: column;
         text-decoration: none;
     }
@@ -339,19 +338,32 @@ position: absolute;
     }
     .logo {
         margin-right: 120px;
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
     .page-header {
         padding-top: 0px;
         padding-bottom: 0px;
 }
 }
+
+@media screen and (min-width: 1200px) {
+    .contacts {
+        display: flex;
+        gap: 40px;
+    }
+}
+
 /*--------------------------HERO-------------------------------*/
 
 @media screen and (max-width: 767px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/homework7/mobile-people-office.jpg);
         max-width: 428px;
-        height: 432px;
+    }
+    .conteiner-hero {
+        padding-top: 112px;
+        padding-bottom: 112px;
     }
     .hero-title {
         font-size: 36px;
@@ -365,8 +377,7 @@ position: absolute;
     }
 }
 .hero-button {
-    display: block;
-    align-items: center;
+    display: inline-block;
     background-color: var(--accent-color);
     color: #FFFFFF;
     font-weight: 500;
@@ -381,11 +392,10 @@ position: absolute;
     cursor: pointer;
     width: 169px;
     border: solid var(--accent-color);
-    margin-bottom: 112px;
-    margin: auto
 }
 .hero {
     display: flex;
+    text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -398,7 +408,6 @@ position: absolute;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 112px;
 }
 .send {
     display: block;
@@ -422,13 +431,25 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/homework7/mobile-people-office@2x.jpg);
     }
 }
+@media screen and (max-width: 380px) {
+    .hero-title {
+       font-size: 20px;
+       font-weight: 400;
+    }
+
+}
+
 
 @media screen and (min-width: 768px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/homework7/tablet-people-office.jpg);
         max-width: 768px;
-        height: 436px;
+       
     }
+        .conteiner-hero {
+            padding-top: 112px;
+            padding-bottom: 108px;
+        }
     .hero-title {
         font-size: 56px;
         line-height: 1.01;
@@ -451,12 +472,16 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/homework7/desktop-people-office.jpg);
         max-width: 1440px;
-        height: 600px;
+        
     }
+        .conteiner-hero {
+            padding-top: 188px;
+            padding-bottom: 188px;
+        }
     .hero-title {
         font-size: 56px;
         line-height: 1.01;
-        padding-top: 188px;
+        
         margin-bottom: 48px;
     }
     .modal {
@@ -513,6 +538,8 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 .title {
    text-align: center;
    margin-bottom: 8px;
+   font-size: 36px;
+   font-weight: 700;
 }
 .section {
     padding-top: 96px;
@@ -544,9 +571,12 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
         padding-top: 120px;
         padding-bottom: 120px;
         }
+        .title {
+            font-size: 20px;
+        }
     .benefits-list {
         display: flex;
-        width: 264px;
+     
         height: 112px;
         background-color: #F4F4FD;
         justify-content: center;
@@ -571,7 +601,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 }
 /*-----------------------------What are we doing-----------------------*/
 .title {
-    font-size: 20px;
+    
     font-weight: 600;
     line-height: 1.2;
 }
@@ -591,7 +621,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     .doing {
         padding-bottom: 0px;
         padding-top: 0px;
-        padding-bottom: 120px;
+        padding-bottom: 0px;
     }
 }
 
@@ -623,7 +653,12 @@ margin-bottom: 120px;
 .team-section {
     background-color: var(--background-color-cection);
 }
-
+.title-team {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
 .team-page {
     text-align: center;
     padding-top: 32px;
@@ -637,7 +672,12 @@ margin-bottom: 120px;
     gap: 24px;
     margin-top: 12px;
 }
-
+.social-list-icons:hover {
+    background-color: #404BBF;
+}
+.social-list-icons:focus {
+    background-color: #404BBF;
+}
 
 .social-list-icons {
     display: flex;
@@ -858,7 +898,7 @@ margin-bottom: 120px;
     padding-top: 8px;
     padding-bottom: 8px;
     color: #FFFFFF;
-    margin-bottom: 16px;
+   
 }
 .futer-button {
     position: relative;
@@ -906,7 +946,8 @@ margin-bottom: 120px;
 }
 .input-futer {
     width: 364px;   
-    height: 40px;        
+    height: 40px;
+    margin-bottom: 16px;        
 }
 .conteiner-footer {
     display: flex;
@@ -926,7 +967,12 @@ margin-bottom: 120px;
 
 }
 }
+@media screen and (max-width: 380px) {
+    .input-futer {
+        width: 300px;
+    }
 
+}
 @media screen and (min-width: 768px) {
 .conteiner-footer {
     display: flex;
@@ -957,6 +1003,9 @@ margin-bottom: 120px;
 @media screen and (min-width: 1200px) {
 .input-futer {
     height: 40px;
+}
+.futer-Subscribe {
+    margin-left: 80px;
 }
 }
 
