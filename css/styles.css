@@ -139,16 +139,16 @@ position: absolute;
     position: fixed;
     top: 0;
     right: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 32px;
+    width: 100%;
+    height: 796px;
     background-color: #ffffff;
     z-index: 999;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
-    padding-left: 80px;
+    padding-top: 80px;
     padding-left: 40px;
     padding-bottom: 40px;
+    
 }
 .menu-conteiner.is-open {
     transform: translateX(0);
@@ -211,7 +211,18 @@ position: absolute;
     list-style-type: none;
     margin-bottom: 284px;
 }
-.mobile-section:not(:last-child) {
+.mobile-nav-item {
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+}
+.mobile-section {
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.mobile-nav-item:not(:last-child) {
     margin-bottom: 40px;
 }
 
@@ -232,10 +243,11 @@ position: absolute;
     font-weight: 600;
     text-decoration: none;
 }
-.mobile-section:hover {
-    color: #404BBF;
+.mobile-section {
+    list-style-type: none;
+    text-decoration: none;
 }
-.mobile-section:focus {
+.mobile-studio {
     color: #404BBF;
 }
 .mobile-link-second {
@@ -255,13 +267,17 @@ position: absolute;
 @media screen and (min-width: 768px) {
     .page-header-conteiner {
         display: flex;
-        align-items: baseline;
+        align-items: center;
+       
     }
     .page-heder-link {
         display: flex;
         gap: 40px;
         
     }
+        .list-contacts {
+            margin-top: 4px;
+        }
     .nav-header {
         position: relative;
         list-style-type: none;
@@ -332,8 +348,7 @@ position: absolute;
     }
     .contacts {
         
-        padding-top: 24px;
-        padding-bottom: 10px;
+      
         list-style-type: none;
     }
     .logo {
@@ -380,7 +395,7 @@ position: absolute;
     display: inline-block;
     background-color: var(--accent-color);
     color: #FFFFFF;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     padding-top: 16px;
@@ -431,13 +446,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/homework7/mobile-people-office@2x.jpg);
     }
 }
-@media screen and (max-width: 380px) {
-    .hero-title {
-       font-size: 20px;
-       font-weight: 400;
-    }
-
-}
 
 
 @media screen and (min-width: 768px) {
@@ -446,7 +454,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         max-width: 768px;
        
     }
-        .conteiner-hero {
+    .conteiner-hero {
             padding-top: 112px;
             padding-bottom: 108px;
         }
@@ -978,7 +986,7 @@ margin-bottom: 120px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 72px 24px;
+    
 }
     .futer-list-icon {
     display: flex;
@@ -993,10 +1001,14 @@ margin-bottom: 120px;
 .futer-Subscribe {
     display: flex;
     flex-direction: column;
+    margin-top: 72px;
 
 }
 .Subscribe-text {
     margin-bottom: 16px;
+}
+.conteiner-list {
+    margin-left: 24px;
 }
 }
 
@@ -1006,6 +1018,9 @@ margin-bottom: 120px;
 }
 .futer-Subscribe {
     margin-left: 80px;
+}
+.conteiner-list {
+    margin-left: 120px;
 }
 }
 
@@ -1179,7 +1194,8 @@ transform: translate(0, 0);
 }
 @media screen and (min-width: 768px) {
 .page-decor {
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 48px;
     }
 .page-section {
     padding-top: 64px;
@@ -1385,4 +1401,16 @@ border: 1.25px solid #404BBF;
     color: #FFFFFF;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+@media screen and (max-width: 380px) {
+    .modal {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .hero-title {
+        width: 250px;
+    }
+    .modal-button {
+        right: 50px;
+    }
 }
