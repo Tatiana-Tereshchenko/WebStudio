@@ -947,10 +947,10 @@ margin-bottom: 120px;
     gap: 16px;
     
 }
+
 .futer-Subscribe {
     display: flex;
-    flex-direction: column;
-        
+    flex-direction: column; 
     margin-top: 72px;
 }
 .form-futer {
@@ -991,7 +991,7 @@ margin-bottom: 120px;
 .conteiner-footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    
     
 }
     .futer-list-icon {
@@ -999,7 +999,9 @@ margin-bottom: 120px;
     gap: 16px;
    
 }
-    
+.box {
+    margin-left: 89px;
+}
 .form-futer {
     display: flex;
     gap: 24px;
@@ -1008,6 +1010,7 @@ margin-bottom: 120px;
     display: flex;
     flex-direction: column;
     margin-top: 72px;
+    margin-left: 89px;
 
 }
 .Subscribe-text {
@@ -1024,9 +1027,13 @@ margin-bottom: 120px;
 }
 .futer-Subscribe {
     margin-left: 80px;
+    margin-top: 0px;
 }
 .conteiner-list {
     margin-left: 120px;
+}
+.box {
+    margin-left: 0px;
 }
 }
 
